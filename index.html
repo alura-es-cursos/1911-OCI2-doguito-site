@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doguito Petshop | Clientes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header container">
+        <img src="images/doguitoadm.svg" alt="Logotipo Doguito" class="header__logo">
+        <nav>
+            <ul class="header__lista-nav">
+                <li class="header__link"><a href="#">Dashboard</a></li>
+                <li class="header__link"><a href="#">Productos</a></li>
+                <li class="header__link"><a href="#">Clientes</a></li>
+                <li class="header__link"><a href="#">Pets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="clientes-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="table__col--p">Nombre</th>
+                    <th class="table__col--g">Email</th>
+                    <th class="table__col--m table__align-right">
+                        <a href="#" class="btn-simples btn-simples--adicionar">Nuevo Cliente</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-table>
+
+            </tbody>
+        </table>
+        <div class="modal-container modal--fechado">
+            <article class="modal">
+                <h2 class="modal__titulo">
+                    Eliminar
+                </h2>
+                <button class="modal__fechar">X</button>
+                <p class="modal__texto">Desea eliminar?</p>
+                <div class="modal__btn-container">
+                    <button class="modal__btn modal__btn--confirmar">Eliminar</button>
+                    <button class="modal__btn">No eliminar</button>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script type="module" src="js/scripts.js"></script>
+</body>
+
+
+</html>

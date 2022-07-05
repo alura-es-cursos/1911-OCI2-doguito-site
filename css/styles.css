@@ -1,0 +1,425 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  padding: 0;
+  border: none;
+  background-color: unset;
+}
+
+input {
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+textarea {
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+:root {
+  --fonte-familia-corpo: "Montserrat", sans-serif;
+  --fonte-familia-logo: "Pacifico", cursive;
+
+  --fonte-peso-input: 300;
+
+  --fonte-tamanho-logo: 28px;
+  --fonte-tamanho-cartao-titulo: 28px;
+  --fonte-tamanho-input-label: 20px;
+  --fonte-tamanho-btn: 22px;
+  --fonte-tamanho-formulario-fieldset: 22px;
+  --fonte-tamanho-table-header: 22px;
+  --fonte-tamanho-modal-titulo: 28px;
+  --fonte-tamanho-modal-btn: 28px;
+
+  --cor-primaria: #0071ea;
+  --cor-secundaria: #d6eaff;
+  --cor-contraste-escuro: #4d4d4d;
+  --cor-contraste-claro: #fff;
+  --cor-aviso: #df2525;
+  --cor-sucesso: #047900;
+  --cor-transparencia: #4d4d4d33;
+
+  --sombra: 0 5px 10px #55a6ff38;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fonte-tamanho-logo: 56px;
+  }
+}
+
+body {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-contraste-escuro);
+  font-family: var(--fonte-familia-corpo);
+  overflow-x: hidden;
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--centro {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--coluna {
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .container {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-left: calc((100vw - 900px) / 2);
+    padding-right: calc((100vw - 900px) / 2);
+  }
+}
+.btn {
+  display: block;
+  background-color: var(--cor-primaria);
+  border-radius: 7px;
+  width: 100%;
+  margin-top: 1rem;
+  max-width: 20rem;
+  padding: 1.125rem;
+  box-sizing: border-box;
+  color: var(--cor-contraste-claro);
+  font-size: var(--fonte-tamanho-btn);
+  align-self: center;
+  text-align: center;
+}
+
+.btn-simples {
+  border: none;
+  background-color: unset;
+}
+
+.btn-simples--adicionar {
+  color: var(--cor-primaria);
+}
+
+.btn-simples--excluir {
+  color: var(--cor-aviso);
+}
+
+.btn-simples--editar {
+  color: var(--cor-sucesso);
+}
+
+.header {
+  background-color: var(--cor-contraste-claro);
+  border-radius: 0 0 10px 10px;
+  box-shadow: var(--sombra);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.75rem;
+  margin-bottom: 2rem;
+}
+
+.header__logo {
+  width: 3rem;
+}
+
+.header__lista-nav {
+  display: flex;
+}
+
+.header__link {
+  margin-left: 2rem;
+}
+.clientes-container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .clientes-container {
+    padding-left: calc((100vw - 900px) / 2);
+    padding-right: calc((100vw - 900px) / 2);
+  }
+}
+.modal {
+  background-color: var(--cor-contraste-claro);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-sizing: border-box;
+  max-width: 22.5rem;
+  position: relative;
+}
+
+.modal-container {
+  background-color: var(--cor-transparencia);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.25s;
+}
+
+.modal__titulo {
+  font-size: var(--fonte-tamanho-modal-titulo);
+  color: var(--cor-aviso);
+  margin-bottom: 1rem;
+}
+
+.modal__btn {
+  font-size: var(--fonte-tamanho-modal-btn);
+}
+
+.modal__texto {
+  margin-bottom: 3.875rem;
+}
+
+.modal__btn--confirmar {
+  color: var(--cor-aviso);
+  margin-right: 2.25rem;
+}
+
+.modal__btn-container {
+  display: flex;
+}
+
+.modal__fechar {
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  top: 1.75rem;
+  right: 1.75rem;
+}
+
+.modal--fechado {
+  left: -100vw;
+  transition: 0.25s;
+}
+.table {
+  margin-top: 2.25rem;
+
+  width: 100%;
+
+  background-color: var(--cor-contraste-claro);
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+
+  border-collapse: initial;
+
+  text-align: left;
+}
+
+.table td:first-of-type,
+.table th:first-of-type {
+  padding-left: 1.75rem;
+}
+
+.table td:last-of-type,
+.table th:last-of-type {
+  padding-right: 1.75rem;
+}
+
+.table thead {
+  font-size: var(--fonte-tamanho-table-header);
+}
+
+.table th {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.table td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.table__align-right {
+  text-align: right;
+}
+
+.table__col--p {
+  width: 20%;
+}
+
+.table__col--m {
+  width: 25%;
+}
+
+.table__col--g {
+  width: 50%;
+}
+
+.table tr:last-of-type td {
+  padding-bottom: 1.75rem;
+}
+
+.table__btns-controle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.table__btns-controle li:first-of-type {
+  margin-right: 2.25rem;
+}
+
+.td {
+  padding: 1rem;
+}
